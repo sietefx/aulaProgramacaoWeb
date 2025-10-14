@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/gabrielfelix/Documents/Cruzeiro/Semestre_01/Algoritmos/Aula02/valor'
+relocations:     []
+...

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Model Canvas - Plataforma de Sustentabilidade na Construção Civil</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .canvas-container {
+            width: 1200px;
+            height: 850px;
+            background-color: white;
+            border: 2px solid #333;
+            margin: 0 auto;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto auto;
+            gap: 0;
+        }
+        
+        .canvas-section {
+            border: 1px solid #666;
+            padding: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .section-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .section-content {
+            font-size: 12px;
+            line-height: 1.4;
+            color: #555;
+        }
+        
+        .section-content ul {
+            margin: 5px 0;
+            padding-left: 15px;
+        }
+        
+        .section-content li {
+            margin-bottom: 3px;
+        }
+        
+        /* Seções específicas */
+        .justificativas {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        
+        .produto {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        
+        .stakeholders {
+            grid-column: 3;
+            grid-row: 1;
+        }
+        
+        .premissas {
+            grid-column: 4;
+            grid-row: 1;
+        }
+        
+        .riscos {
+            grid-column: 5;
+            grid-row: 1;
+        }
+        
+        .obj-smart {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        
+        .requisitos {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        
+        .equipe {
+            grid-column: 3;
+            grid-row: 2;
+        }
+        
+        .grupo-entregas {
+            grid-column: 4;
+            grid-row: 2;
+        }
+        
+        .linha-tempo {
+            grid-column: 5;
+            grid-row: 2;
+        }
+        
+        .beneficios {
+            grid-column: 1;
+            grid-row: 3;
+        }
+        
+        .restricoes {
+            grid-column: 2 / 5;
+            grid-row: 3;
+        }
+        
+        .custos {
+            grid-column: 5;
+            grid-row: 3;
+        }
+        
+        .footer {
+            grid-column: 1 / 6;
+            grid-row: 4;
+            text-align: right;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            border-top: 2px solid #333;
+        }
+        
+        /* Ícones usando símbolos Unicode */
+        .icon-chat::before { content: "💬"; }
+        .icon-product::before { content: "📦"; }
+        .icon-people::before { content: "👥"; }
+        .icon-cloud::before { content: "☁️"; }
+        .icon-warning::before { content: "⚠️"; }
+        .icon-target::before { content: "🎯"; }
+        .icon-list::before { content: "📋"; }
+        .icon-team::before { content: "👨‍💼"; }
+        .icon-boxes::before { content: "📦📦📦"; }
+        .icon-timeline::before { content: "⏱️"; }
+        .icon-chart::before { content: "📊"; }
+        .icon-stop::before { content: "🚫"; }
+        .icon-money::before { content: "💰"; }
+        
+        .highlight {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        
+        .small-text {
+            font-size: 10px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas-container">
+        <!-- Linha 1 -->
+        <div class="canvas-section justificativas">
+            <div class="section-header">
+                <span class="icon-chat"></span>
+                <span>JUSTIFICATIVAS<br><span class="small-text">Passado</span></span>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><strong>Desperdício massivo:</strong> 120 milhões de toneladas de resíduos anuais na construção civil</li>
+                    <li><strong>Exclusão digital:</strong> 2,5 milhões de pedreiros autônomos sem acesso a tecnologias</li>
+                    <li><strong>Baixo poder de compra:</strong> Profissionais sem acesso a descontos e benefícios</li>
+                    <li><strong>Sistema fragmentado:</strong> Falta de integração entre stakeholders</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="canvas-section produto">
+            <div class="section-header">
+                <span class="icon-product"></span>
+                <span>PRODUTO</span>
+            </div>
+            <div class="section-content">
+                <p><strong>Plataforma Digital Integrada</strong></p>
+                <ul>
+                    <li>Sistema de cashback para compras</li>
+                    <li>Marketplace de economia circular</li>
+                    <li>Programa de pontos por reciclagem</li>
+                    <li>Ferramentas de fidelização</li>
+                    <li>Interface acessível e intuitiva</li>
+                    <li>Funcionalidades offline</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="canvas-section stakeholders">
+            <div class="section-header">
+                <span class="icon-people"></span>
+                <span>STAKEHOLDERS<br><span class="small-text">& Fatores externos</span></span>
+            </div>
+            <div class="section-content">
+                <p><strong>Internos:</strong></p>
+                <ul>
+                    <li>Pedreiros autônomos</li>
+                    <li>Pequenos profissionais da construção</li>
+                    <li>Lojas de materiais</li>
+                </ul>
+                <p><strong>Externos:</strong></p>
+                <ul>
+                    <li>Órgãos ambientais</li>
+                    <li>Sindicatos da construção</li>
+                    <li>Cooperativas de reciclagem</li>
+                    <li>Governo municipal</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="canvas-section premissas">
+            <div class="section-header">
+                <span class="icon-cloud"></span>
+                <span>PREMISSAS</span>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li>Crescimento da consciência ambiental</li>
+                    <li>Aumento do acesso à internet móvel</li>
+                    <li>Interesse das lojas em fidelização</li>
+                    <li>Apoio governamental à sustentabilidade</li>
+                    <li>Disposição dos profissionais para mudança</li>
+                    <li>Viabilidade técnica da solução</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="canvas-section riscos">
+            <div class="section-header">
+                <span class="icon-warning"></span>
+                <span>RISCOS</span>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><span class="highlight">Alto:</span> Resistência à adoção tecnológica</li>
+                    <li><span class="highlight">Médio:</span> Concorrência de grandes players</li>
+                    <li><span class="highlight">Médio:</span> Mudanças na legislação ambiental</li>
+                    <li><span class="highlight">Baixo:</span> Problemas técnicos de infraestrutura</li>
+                    <li><span class="highlight">Baixo:</span> Flutuações econômicas do setor</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Linha 2 -->
+        <div class="canvas-section obj-smart">
+            <div class="section-header">
+                <span class="icon-target"></span>
+                <span>OBJ SMART</span>
+            </div>
+            <div class="section-content">
+                <p><strong>Específico:</strong> Reduzir desperdício e aumentar renda</p>
+                <p><strong>Mensurável:</strong> 10.000 usuários em 12 meses</p>
+                <p><strong>Atingível:</strong> Foco em região metropolitana</p>
+                <p><strong>Relevante:</strong> Impacto social e ambiental</p>
+                <p><strong>Temporal:</strong> Lançamento em 6 meses</p>
+            </div>
+        </div>
+        
+        <div class="canvas-section requisitos">
+            <div class="section-header">
+                <span class="icon-list"></span>
+                <span>REQUISITOS</span>
+            </div>
+            <div class="section-content">
+                <p><strong>Funcionais:</strong></p>
+                <ul>
+                    <li>Sistema de cashback automático</li>
+                    <li>Marketplace integrado</li>
+                    <li>Programa de pontos</li>
+                </ul>
+                <p><strong>Não-funcionais:</strong></p>
+                <ul>
+                    <li>Compatibilidade WCAG 2.1</li>
+                    <li>Funciona com internet 2G</li>
+                    <li>Suporte a Android 5.0+</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="canvas-section equipe">
+            <div class="section-header">
+                <span class="icon-team"></span>
+                <span>EQUIPE</span>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><strong>Gerente de Projeto:</strong> Coordenação geral</li>
+                    <li><strong>Desenvolvedor Mobile:</strong> App nativo</li>
+                    <li><strong>UX/UI Designer:</strong> Interface acessível</li>
+                    <li><strong>Especialista em Sustentabilidade:</strong> Consultoria</li>
+                    <li><strong>Analista de Negócios:</strong> Parcerias</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="canvas-section grupo-entregas">
+            <div class="section-header">
+                <span class="icon-boxes"></span>
+                <span>GRUPO DE<br>ENTREGAS</span>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><strong>MVP:</strong> App básico com cashback</li>
+                    <li><strong>V2:</strong> Marketplace integrado</li>
+                    <li><strong>V3:</strong> Sistema de pontos</li>
+                    <li><strong>V4:</strong> Dashboard analytics</li>
+                    <li><strong>V5:</strong> Expansão regional</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="canvas-section linha-tempo">
+            <div class="section-header">
+                <span class="icon-timeline"></span>
+                <span>LINHA DO TEMPO</span>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><strong>Mês 1-2:</strong> Pesquisa e design</li>
+                    <li><strong>Mês 3-4:</strong> Desenvolvimento MVP</li>
+                    <li><strong>Mês 5:</strong> Testes e ajustes</li>
+                    <li><strong>Mês 6:</strong> Lançamento piloto</li>
+                    <li><strong>Mês 7-12:</strong> Expansão e melhorias</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Linha 3 -->
+        <div class="canvas-section beneficios">
+            <div class="section-header">
+                <span class="icon-chart"></span>
+                <span>BENEFÍCIOS<br><span class="small-text">Futuro</span></span>
+            </div>
+            <div class="section-content">
+                <p><strong>Econômicos:</strong></p>
+                <ul>
+                    <li>Aumento de 15-20% na renda dos profissionais</li>
+                    <li>Redução de 30% nos custos de materiais</li>
+                </ul>
+                <p><strong>Ambientais:</strong></p>
+                <ul>
+                    <li>Redução de 40% no desperdício</li>
+                    <li>Aumento da reciclagem em 60%</li>
+                </ul>
+                <p><strong>Sociais:</strong></p>
+                <ul>
+                    <li>Inclusão digital de 10.000 profissionais</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="canvas-section restricoes">
+            <div class="section-header">
+                <span class="icon-stop"></span>
+                <span>RESTRIÇÕES</span>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><strong>Orçamentárias:</strong> Investimento inicial limitado a R$ 500.000</li>
+                    <li><strong>Temporais:</strong> Lançamento obrigatório em 6 meses para capturar mercado</li>
+                    <li><strong>Técnicas:</strong> Compatibilidade com dispositivos antigos (Android 5.0+)</li>
+                    <li><strong>Regulatórias:</strong> Conformidade com LGPD e normas ambientais</li>
+                    <li><strong>Recursos:</strong> Equipe máxima de 5 pessoas especializadas</li>
+                    <li><strong>Geográficas:</strong> Início restrito à região metropolitana</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="canvas-section custos">
+            <div class="section-header">
+                <span class="icon-money"></span>
+                <span>CUSTOS</span>
+            </div>
+            <div class="section-content">
+                <p><strong>Desenvolvimento:</strong></p>
+                <ul>
+                    <li>Equipe: R$ 300.000</li>
+                    <li>Infraestrutura: R$ 50.000</li>
+                </ul>
+                <p><strong>Operacionais:</strong></p>
+                <ul>
+                    <li>Marketing: R$ 80.000</li>
+                    <li>Manutenção: R$ 40.000</li>
+                </ul>
+                <p><strong>Contingência:</strong></p>
+                <ul>
+                    <li>Reserva: R$ 30.000</li>
+                </ul>
+                <p><strong>Total: R$ 500.000</strong></p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            Project Model Canvas
+        </div>
+    </div>
+</body>
+</html>
+

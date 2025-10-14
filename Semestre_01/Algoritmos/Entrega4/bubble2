@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+// Definir array com 10 produtos
+
+float precoProdutos[10] = {10.00, 11.00, 3.00, 2.99, 3.99, 4.98, 5.97, 4.44, 9.99, 15.99};
+char *produtos[10] = {
+    "Arroz",
+    "Manteiga",
+    "Sal",
+    "Sabão",
+    "Pimenta",
+    "Batata",
+    "Tomate",
+    "Beterraba",
+    "Quinoa",
+    "Queijo"
+}
+
+// Imprimir os preços dos produtos
+void imprimirPrecos(float arr[], int n)
