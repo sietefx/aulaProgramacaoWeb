@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projetos | Organização Voluntários</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <img src="img/logo.png" alt="marca" class="logo-img" />
+      <button class="menu-toggle" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+      <ul id="navMenu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projeto.html" class="active">Projetos</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero hero-projeto">
+      <div class="hero-content">
+        <h1>Projetos que transformam vidas</h1>
+        <p>Conheça ações reais que estão gerando impacto positivo em nossa comunidade.</p>
+        <a href="cadastro.html" class="btn-hero">Seja parte disso</a>
+      </div>
+    </section>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-projetos">
+    
+    <!-- SEÇÃO: CARROSSEL DE PROJETOS -->
+    <section class="carousel-section">
+      <h2>Nossos Projetos em Destaque</h2>
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="slide">
+            <img src="img/projeto-educacao.jpg" alt="Projeto Educação para Todos">
+            <h3>Educação para Todos</h3>
+            <p>Aulas de reforço escolar e alfabetização para crianças da periferia.</p>
+          </div>
+
+          <div class="slide">
+            <img src="img/projeto-familias.jpg" alt="Projeto Famílias Unidas">
+            <h3>Famílias Unidas</h3>
+            <p>Assistência alimentar e apoio psicológico para famílias vulneráveis.</p>
+          </div>
+
+          <div class="slide">
+            <img src="img/projeto-meioambiente.jpg" alt="Projeto Verde Esperança">
+            <h3>Verde Esperança</h3>
+            <p>Mutirões de limpeza e educação ambiental em comunidades locais.</p>
+          </div>
+        </div>
+        <button class="carousel-btn prev">❮</button>
+        <button class="carousel-btn next">❯</button>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: IMPACTO -->
+    <section class="impacto">
+      <h2>Nosso Impacto</h2>
+      <div class="impacto-grid">
+        <div class="impacto-item">
+          <h3>+1200</h3>
+          <p>Crianças atendidas com reforço educacional</p>
+        </div>
+        <div class="impacto-item">
+          <h3>+300</h3>
+          <p>Famílias beneficiadas com doações mensais</p>
+        </div>
+        <div class="impacto-item">
+          <h3>+50</h3>
+          <p>Voluntários ativos em todo o estado</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: HISTÓRIAS REAIS -->
+    <section class="historias">
+      <h2>Histórias que Inspiram</h2>
+      <div class="historias-grid">
+        <div class="historia">
+          <img src="img/historia1.jpg" alt="Depoimento de Maria" />
+          <blockquote>“As aulas mudaram completamente o futuro dos meus filhos.”</blockquote>
+          <p><strong>Maria da Silva</strong> — mãe beneficiada pelo projeto Educação para Todos</p>
+        </div>
+
+        <div class="historia">
+          <img src="img/historia2.jpg" alt="Depoimento de João" />
+          <blockquote>“Ser voluntário me fez perceber o poder que temos de mudar vidas.”</blockquote>
+          <p><strong>João Ferreira</strong> — voluntário do projeto Famílias Unidas</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="year"></span> Organização Voluntariado. Todos os direitos reservados.</p>
+    <p>Feito com 💙 para transformar vidas.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- Script do carrossel -->
+  <script>
+    const track = document.querySelector(".carousel-track");
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector(".next");
+    const prevButton = document.querySelector(".prev");
+    let currentSlide = 0;
+
+    function updateCarousel() {
+      slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(${100 * (i - currentSlide)}%)`;
+      });
+    }
+
+    nextButton.addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateCarousel();
+    });
+
+    prevButton.addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+
+    updateCarousel();
+  </script>
+</body>
+</html>
