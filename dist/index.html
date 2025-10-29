@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Organização Voluntários</title><link rel="stylesheet" href="style.css"></head><style>/* ====== LINK DE ACESSIBILIDADE ====== */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0d47a1;
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 100;
+      border-radius: 0 0 6px 6px;
+      transition: top 0.3s ease;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* ====== BOTÃO DARK MODE ====== */
+    #toggleTheme {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: #0d47a1;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      z-index: 99;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    #toggleTheme:hover {
+      background: #1565c0;
+      transform: scale(1.05);
+    }</style><body><!-- HEADER --><header><nav class="navbar"><img src="img/logo.png" alt="marca"> <button class="menu-toggle" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menu" onclick="toggleMenu()">☰</button><ul id="navMenu"><li><a href="index.html" class="active">Início</a></li><li><a href="projeto.html">Projetos</a></li><li><a href="cadastro.html">Cadastro</a></li></ul></nav><!-- HERO --><section class="hero hero-index"><div class="hero-content"><h1>Transforme vidas com seu tempo e seu coração 💙</h1><p>Faça parte da nossa rede de voluntários e ajude crianças a sonhar mais alto.</p><a href="cadastro.html" class="btn-hero">Quero me cadastrar</a></div></section><!-- MAIN --><main><!-- QUEM SOMOS --><section class="about-section"><div class="about-grid"><div class="about-text"><h2>Quem Somos</h2><p>A <strong>Organização Voluntários</strong> é uma instituição sem fins lucrativos dedicada a promover educação, cultura e oportunidades para crianças e jovens de comunidades em vulnerabilidade social.</p><p>Unimos pessoas que acreditam que doar tempo e conhecimento pode transformar o futuro. Atuamos com empatia, propósito e compromisso com o desenvolvimento humano.</p></div><div class="about-image"><img src="img/sorriso.png" alt="Criança brasileira sorrindo feliz"></div></div></section><!-- CONTATO --><section class="contact"><h3>Entre em contato</h3><address class="address"><p>📍 Rua Itapetininga, 274E – Centro / Chapecó / SC</p><p>📞 (49) 99123-1234</p><p>✉️ <a href="mailto:contato@voluntarios.org">contato@voluntarios.org</a></p></address></section></main><!-- FOOTER --><footer><p>&copy; <span id="year"></span> Organização Voluntariado. Todos os direitos reservados.</p><p>Feito com 💙 para transformar vidas.</p></footer><script>document.getElementById('year').textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }</script><button id="toggleTheme" aria-label="Alternar modo escuro/claro">🌓</button><script src="script.js"></script></header></body></html>

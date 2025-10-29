@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cadastro de Voluntários</title><link rel="stylesheet" href="style.css"><style>/* ====== LINK DE ACESSIBILIDADE ====== */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0d47a1;
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 100;
+      border-radius: 0 0 6px 6px;
+      transition: top 0.3s ease;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* ====== BOTÃO DARK MODE ====== */
+    #toggleTheme {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: #0d47a1;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      z-index: 99;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    #toggleTheme:hover {
+      background: #1565c0;
+      transform: scale(1.05);
+    }</style></head><body><!-- Link de acessibilidade --> <a class="skip-link" href="#mainContent">Pular para o conteúdo principal</a><!-- HEADER --><header><nav class="navbar" role="navigation" aria-label="Menu principal"><img src="img/logo.png" alt="Logo da Organização de Voluntários"> <button class="menu-toggle" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menu" onclick="toggleMenu()">☰</button><ul id="navMenu"><li><a href="index.html">Início</a></li><li><a href="projeto.html">Projetos</a></li><li><a href="cadastro.html" class="active">Cadastro</a></li></ul></nav></header><!-- HERO --><section class="hero hero-cadastro"><div class="hero-content"><h1>Cadastre-se como Voluntário</h1><p>Junte-se a nós e faça a diferença na vida de muitas pessoas através do voluntariado.</p></div></section><!-- CONTEÚDO PRINCIPAL --><main id="mainContent" tabindex="-1"><section class="signup-section"><h2>Cadastro de Voluntários</h2><div class="success-message" id="successMessage" role="alert" aria-live="polite">✅ Cadastro realizado com sucesso! Entraremos em contato em breve.</div><form id="volunteerForm" onsubmit="handleSubmit(event)"><fieldset><legend>Dados Pessoais</legend><div class="form-group"><label for="nome">Nome Completo *</label> <input type="text" id="nome" name="nome" required></div><div class="form-group"><label for="email">E-mail *</label> <input type="email" id="email" name="email" required></div><div class="form-group"><label for="telefone">Telefone *</label> <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required></div><div class="form-group"><label for="idade">Idade *</label> <input type="number" id="idade" name="idade" min="16" max="100" required></div></fieldset><fieldset><legend>Disponibilidade</legend><div class="form-group"><label for="disponibilidade">Quando você pode ajudar? *</label> <select id="disponibilidade" name="disponibilidade" required><option value="">Selecione...</option><option value="fins-de-semana">Fins de semana</option><option value="dias-uteis">Dias úteis</option><option value="flexivel">Horário flexível</option><option value="pontual">Ações pontuais</option></select></div><div class="form-group"><label for="area-interesse">Área de Interesse *</label> <select id="area-interesse" name="area-interesse" required><option value="">Selecione...</option><option value="distribuicao-alimentos">Distribuição de Alimentos</option><option value="educacao">Educação e Capacitação</option><option value="saude">Apoio à Saúde</option><option value="administrativo">Apoio Administrativo</option><option value="qualquer">Qualquer área</option></select></div></fieldset><fieldset><legend>Informações Adicionais</legend><div class="form-group"><label for="experiencia">Você já participou de ações voluntárias antes?</label> <textarea id="experiencia" name="experiencia" placeholder="Conte-nos sobre sua experiência..."></textarea></div><div class="form-group"><label for="motivacao">Por que você quer ser voluntário?</label> <textarea id="motivacao" name="motivacao" placeholder="Compartilhe sua motivação..."></textarea></div></fieldset><button type="submit" class="btn-primary">Enviar Cadastro</button></form><!-- LISTA DE VOLUNTÁRIOS --><section class="voluntarios-lista" aria-label="Lista de voluntários cadastrados"><h2>Voluntários Cadastrados</h2><div id="tabelaVoluntarios"></div><button onclick="limparTabela()" aria-label="Limpar lista de voluntários cadastrados">Limpar Tabela</button></section></section></main><!-- FOOTER --><footer role="contentinfo"><p>&copy; 2025 Organização de Voluntários. Todos os direitos reservados.</p><p>Feito com ❤️ para transformar vidas.</p></footer><button id="toggleTheme" aria-label="Alternar modo escuro/claro">🌓</button><script src="script.js"></script></body></html>
