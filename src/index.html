@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Organização Voluntários</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" as="style">
+  <meta name="keywords" content="voluntariado, projetos sociais, doações, impacto, educação">
+  <meta name="author" content="Organização Voluntários">
+  <meta property="og:image" content="img/voluntarios-bg.jpg">
+  <meta property="og:title" content="Organização Voluntários">
+  <meta property="og:description" content="Transforme vidas com seu tempo e seu coração.">
+  <meta name="robots" content="index, follow">
 
   <style>
     /* ====== LINK DE ACESSIBILIDADE ====== */
@@ -192,7 +199,7 @@
         Conquistamos reconhecimento municipal e estadual por nossos projetos de impacto social e
         pela formação de redes colaborativas de voluntariado.
       </p>
-      <img src="img/conquista.jpg" alt="Equipe comemorando conquistas" style="max-width:600px; border-radius:10px; margin-top:1.5rem;">
+      <img src="img/conquista.jpg" alt="Equipe comemorando conquistas" loading="lazy">
     </section>
 
     <!-- EQUIPE E ESTRUTURA -->
@@ -227,6 +234,70 @@
         <li><a href="docs/balanco-financeiro.pdf" target="_blank">💰 Balanço Financeiro</a></li>
       </ul>
     </section>
+
+    <!-- CAMPANHAS E DOAÇÕES -->
+<section class="donations-section">
+  <h2>Campanhas de Arrecadação e Doações</h2>
+  <p>
+    Participe das nossas campanhas solidárias! Sua contribuição faz toda a diferença
+    para centenas de famílias e projetos em andamento.
+  </p>
+
+  <div class="donations-grid">
+    <div class="campaign">
+      <img src="img/doacao-alimentos.jpg" alt="Campanha de doação de alimentos">
+      <h3>Doe Alimentos</h3>
+      <p>Ajude a garantir comida na mesa de quem mais precisa.</p>
+      <button class="btn-doar" onclick="abrirDoacao('alimentos')">Doar Agora</button>
+    </div>
+
+    <div class="campaign">
+      <img src="img/doacao-educacao.jpg" alt="Campanha de materiais escolares">
+      <h3>Apoie a Educação</h3>
+      <p>Contribua com kits escolares e oportunidades de aprendizado.</p>
+      <button class="btn-doar" onclick="abrirDoacao('educacao')">Doar Agora</button>
+    </div>
+
+    <div class="campaign">
+      <img src="img/doacao-roupas.jpg" alt="Campanha de doação de roupas">
+      <h3>Aqueça Corações</h3>
+      <p>Doe roupas e cobertores para famílias em situação de vulnerabilidade.</p>
+      <button class="btn-doar" onclick="abrirDoacao('roupas')">Doar Agora</button>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO: NOTÍCIAS E COMUNICAÇÃO -->
+<section class="news-section">
+  <h2>Notícias e Comunicação</h2>
+  <p>Fique por dentro das últimas novidades e acompanhe nossas ações!</p>
+
+  <div class="news-grid">
+    <div class="news-card">
+      <h3>📰 Blog e Atualizações</h3>
+      <p>Histórias, conquistas e bastidores dos projetos que transformam vidas.</p>
+      <a href="blog.html" class="btn-secondary">Acessar Blog</a>
+    </div>
+
+    <div class="news-card">
+      <h3>📬 Newsletter</h3>
+      <p>Receba nossas novidades por e-mail e participe de campanhas exclusivas.</p>
+      <a href="newsletter.html" class="btn-secondary">Assinar Newsletter</a>
+    </div>
+
+    <div class="news-card">
+      <h3>📢 Área de Imprensa</h3>
+      <p>Releases, fotos e materiais de divulgação para jornalistas e parceiros.</p>
+      <a href="imprensa.html" class="btn-secondary">Acessar Imprensa</a>
+    </div>
+
+    <div class="news-card">
+      <h3>📂 Documentos Públicos</h3>
+      <p>Transparência e responsabilidade: consulte nossos documentos oficiais.</p>
+      <a href="documentos.html" class="btn-secondary">Ver Documentos</a>
+    </div>
+  </div>
+</section>
 
     <!-- CONTATO -->
     <section class="contact">

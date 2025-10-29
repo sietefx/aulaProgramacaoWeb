@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro de Voluntários</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" as="style">
+  <meta name="description" content="Organização Voluntários - educação, solidariedade e impacto social.">
+  <meta name="keywords" content="voluntariado, projetos sociais, doações, impacto, educação">
+  <meta name="author" content="Organização Voluntários">
+  <meta property="og:image" content="img/voluntarios-bg.jpg">
+  <meta property="og:title" content="Organização Voluntários">
+  <meta property="og:description" content="Transforme vidas com seu tempo e seu coração.">
+  <meta name="robots" content="index, follow">
 
   <style>
     /* ====== LINK DE ACESSIBILIDADE ====== */
@@ -103,7 +111,27 @@
             <label for="idade">Idade *</label>
             <input type="number" id="idade" name="idade" min="16" max="100" required />
           </div>
+
+           <div class="form-group">
+          <label for="cpf">CPF *</label>
+          <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF válido no formato 000.000.000-00">
+        </div>
+
+        <div class="form-group">
+          <label for="dataNascimento">Data de Nascimento *</label>
+          <input type="date" id="dataNascimento" name="dataNascimento" required>
+        </div>
+
+        <div class="form-group">
+          <label for="endereco">Endereço *</label>
+          <input type="text" id="endereco" name="endereco" required>
+        </div>
+        <div class="form-group">
+          <label for="cep">CEP *</label>
+          <input type="text" id="cep" name="cep" required pattern="\d{5}-\d{3}" title="Digite um CEP válido no formato 00000-000">
         </fieldset>
+
+       
 
         <fieldset>
           <legend>Disponibilidade</legend>

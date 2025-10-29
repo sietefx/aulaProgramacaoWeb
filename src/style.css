@@ -890,3 +890,361 @@ body.dark-mode .reports-section a:hover {
         padding: 3rem 1rem;
     }
 }
+/* ====== SEÇÃO CERTIFICADOS ====== */
+.certificados {
+    background: #f7f9fc;
+    padding: 5rem 2rem;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+.certificados-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.certificados h2 {
+    color: #0d47a1;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.certificados p {
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.certificados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.certificado-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificado-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.certificado-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.certificado-item h3 {
+    color: #1976d2;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+.certificado-item p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* ====== DARK MODE ====== */
+body.dark-mode .certificados {
+    background: #1e1e1e !important;
+    color: #eaeaea !important;
+}
+
+body.dark-mode .certificados h2 {
+    color: #90caf9 !important;
+}
+
+body.dark-mode .certificados p {
+    color: #ccc !important;
+}
+
+body.dark-mode .certificado-item {
+    background: #2a2a2a !important;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .certificado-item h3 {
+    color: #64b5f6 !important;
+}
+
+body.dark-mode .certificado-item p {
+    color: #ccc !important;
+}
+/* ====== ÍCONE DE CERTIFICADO ====== */
+.certificado-icon {
+    width: 120px;
+    /* tamanho fixo base */
+    height: 120px;
+    /* garante formato quadrado */
+    object-fit: contain;
+    /* mantém proporção interna */
+    margin: 1rem auto;
+    /* centraliza e dá espaçamento */
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificado-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.3);
+}
+
+/* Adaptação responsiva */
+@media (max-width: 600px) {
+    .certificado-icon {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* ====== CAMPANHAS E DOAÇÕES ====== */
+.donations-section {
+    background: #fff;
+    color: #222;
+    padding: 5rem 2rem;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.donations-section h2 {
+    color: #0d47a1;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.donations-section p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.donations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.campaign {
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campaign:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.campaign img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.campaign h3 {
+    color: #1976d2;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.btn-doar {
+    display: inline-block;
+    background: linear-gradient(90deg, #1976d2, #2196f3);
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-doar:hover {
+    background: linear-gradient(90deg, #0d47a1, #1976d2);
+    transform: translateY(-2px);
+}
+
+/* ====== MODO ESCURO ====== */
+body.dark-mode .donations-section {
+    background: #1a1a1a;
+    color: #eaeaea;
+}
+
+body.dark-mode .campaign {
+    background: #2a2a2a;
+    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .campaign h3 {
+    color: #90caf9;
+}
+
+body.dark-mode .btn-doar {
+    background: linear-gradient(90deg, #64b5f6, #2196f3);
+    color: #fff;
+}
+/* ====== SEÇÃO DE NOTÍCIAS E COMUNICAÇÃO ====== */
+.news-section {
+    background: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.news-section h2 {
+    color: #0d47a1;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.news-section p {
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.news-card {
+    background: #f7f9fc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.news-card h3 {
+    color: #1976d2;
+    margin-bottom: 0.8rem;
+}
+
+.news-card p {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: #1976d2;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #0d47a1;
+}
+
+/* ====== MODO ESCURO ====== */
+body.dark-mode .news-section {
+    background: #1a1a1a;
+    color: #eaeaea;
+}
+
+body.dark-mode .news-card {
+    background: #2a2a2a;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .news-card h3 {
+    color: #90caf9;
+}
+
+body.dark-mode .btn-secondary {
+    background: #2196f3;
+}
+
+body.dark-mode .btn-secondary:hover {
+    background: #1565c0;
+}
+@media (max-width: 480px) {
+  .hero-content h1 { font-size: 1.5rem; }
+  .hero-content p { font-size: 0.9rem; }
+  .values-grid, .news-grid { gap: 1rem; }
+}
+a:focus,
+button:focus {
+    outline: 2px solid #90caf9;
+    outline-offset: 4px;
+}
+/* Correção de alinhamento e espaçamento dos labels fora de .form-group */
+label[for="cpf"],
+label[for="dataNascimento"],
+label[for="endereco"],
+label[for="cep"],
+label[for="cidade"],
+label[for="estado"] {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 500;
+    color: #0d47a1;
+}
+
+input#cpf,
+input#dataNascimento,
+input#endereco,
+input#cep,
+input#cidade,
+select#estado {
+    width: 100%;
+    padding: .7rem .8rem;
+    border-radius: 6px;
+    border: 1px solid #cfd8dc;
+    background: #fff;
+    transition: border .3s, box-shadow .3s;
+    font-size: .95rem;
+    margin-top: .3rem;
+}
+body.dark-mode label[for="cpf"],
+body.dark-mode label[for="dataNascimento"],
+body.dark-mode label[for="endereco"],
+body.dark-mode label[for="cep"],
+body.dark-mode label[for="cidade"],
+body.dark-mode label[for="estado"] {
+    color: #90caf9;
+}
+
+body.dark-mode input#cpf,
+body.dark-mode input#dataNascimento,
+body.dark-mode input#endereco,
+body.dark-mode input#cep,
+body.dark-mode input#cidade,
+body.dark-mode select#estado {
+    background: #2b2b2b !important;
+    color: #f5f5f5 !important;
+    border: 1px solid #555 !important;
+}
