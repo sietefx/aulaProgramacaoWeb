@@ -672,14 +672,12 @@ fieldset legend {
     box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
     transition: background .3s, color .3s, box-shadow .3s;
     overflow-x: auto;
-    /* 🔥 ADICIONE ESTA LINHA */
 }
 
 /* Para evitar colunas quebrando o layout */
 .tabela-voluntarios {
     width: 100%;
     min-width: 500px;
-    /* 🔥 Mantém formato mesmo em telas estreitas */
     border-collapse: collapse;
 }
 
@@ -1129,13 +1127,9 @@ body.dark-mode .certificado-item p {
 /* ====== ÍCONE DE CERTIFICADO ====== */
 .certificado-icon {
     width: 120px;
-    /* tamanho fixo base */
     height: 120px;
-    /* garante formato quadrado */
     object-fit: contain;
-    /* mantém proporção interna */
     margin: 1rem auto;
-    /* centraliza e dá espaçamento */
     display: block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1145,7 +1139,6 @@ body.dark-mode .certificado-item p {
     box-shadow: 0 4px 12px rgba(13, 71, 161, 0.3);
 }
 
-/* Adaptação responsiva */
 @media (max-width: 600px) {
     .certificado-icon {
         width: 90px;
@@ -1347,7 +1340,7 @@ button:focus {
     outline: 2px solid #90caf9;
     outline-offset: 4px;
 }
-/* Correção de alinhamento e espaçamento dos labels fora de .form-group */
+
 label[for="cpf"],
 label[for="dataNascimento"],
 label[for="endereco"],
