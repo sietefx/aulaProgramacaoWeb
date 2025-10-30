@@ -1,3 +1,69 @@
+:root {
+    /* Cores */
+    --color-primary: #0d47a1;
+    --color-primary-light: #1976d2;
+    --color-secondary: #2196f3;
+    --color-neutral-light: #f7f9fc;
+    --color-neutral-dark: #1a1a1a;
+    --color-success: #2e7d32;
+    --color-warning: #fbc02d;
+    --color-error: #d32f2f;
+
+    /* Tipografia */
+    --font-family: 'Poppins', sans-serif;
+    --font-size-xs: 0.8rem;
+    --font-size-sm: 0.9rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.3rem;
+    --font-size-xl: 2rem;
+
+    /* Espaçamentos (sistema 8px) */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
+    --space-6: 64px;
+}
+
+@media (max-width: 1200px) {
+    /* Desktop médio */
+}
+
+@media (max-width: 992px) {
+    /* Tablet horizontal */
+}
+
+@media (max-width: 768px) {
+    /* Tablet vertical */
+}
+
+@media (max-width: 576px) {
+    /* Celular grande */
+}
+
+@media (max-width: 400px) {
+    /* Celular pequeno */
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-2);
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-12 {
+    grid-column: span 12;
+}
+
 .btn-hero,
 .navbar a {
     transition: .3s;
@@ -54,9 +120,16 @@ header {
     padding: 2rem
 }
 
-.logo {
-    font-weight: 700;
-    font-size: 1.2rem
+.navbar {
+    flex-wrap: wrap;
+}
+
+.navbar img {
+    margin-bottom: 0.5rem;
+}
+
+.navbar img:hover {
+    transform: scale(1.03);
 }
 
 .navbar ul {
@@ -75,6 +148,25 @@ header {
 
 .navbar a {
     color: #fff
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 38px;
+    }
 }
 
 .menu-toggle {
@@ -126,7 +218,6 @@ header {
 
 .hero-cadastro {
     background: url("img/voluntarios-verde.jpg") center/cover no-repeat;
-    margin-bottom: -4rem
 }
 
 .btn-hero {
@@ -137,6 +228,21 @@ header {
     border-radius: 25px;
     margin-top: 1.5rem;
     font-weight: 800
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
 }
 
 .signup-section,
@@ -553,6 +659,46 @@ fieldset legend {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
     transition: background .3s, color .3s, box-shadow .3s
+}
+
+/* ====== TABELA RESPONSIVA ====== */
+.voluntarios-lista {
+    width: 100%;
+    max-width: 860px;
+    margin: 3rem auto 0;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    transition: background .3s, color .3s, box-shadow .3s;
+    overflow-x: auto;
+    /* 🔥 ADICIONE ESTA LINHA */
+}
+
+/* Para evitar colunas quebrando o layout */
+.tabela-voluntarios {
+    width: 100%;
+    min-width: 500px;
+    /* 🔥 Mantém formato mesmo em telas estreitas */
+    border-collapse: collapse;
+}
+
+@media (max-width: 600px) {
+
+    .tabela-voluntarios th,
+    .tabela-voluntarios td {
+        font-size: 0.85rem;
+        padding: 0.6rem;
+    }
+
+    .voluntarios-lista {
+        padding: 1rem;
+    }
+
+    .voluntarios-lista button {
+        width: 100%;
+        margin-top: 1rem;
+    }
 }
 
 footer {
