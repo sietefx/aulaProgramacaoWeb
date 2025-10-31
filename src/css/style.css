@@ -209,15 +209,15 @@ header {
 }
 
 .hero-index {
-    background: url("img/voluntarios-bg.jpg") center/cover no-repeat
+    background: url("../img/voluntarios-bg.jpg") center/cover no-repeat
 }
 
 .hero-projeto {
-    background: url("img/voluntarios-azul.jpg") center/cover no-repeat
+    background: url("../img/voluntarios-azul.jpg") center/cover no-repeat
 }
 
 .hero-cadastro {
-    background: url("img/voluntarios-verde.jpg") center/cover no-repeat;
+    background: url("../img/voluntarios-verde.jpg") center/cover no-repeat
 }
 
 .btn-hero {
@@ -1386,4 +1386,42 @@ body.dark-mode select#estado {
     background: #2b2b2b !important;
     color: #f5f5f5 !important;
     border: 1px solid #555 !important;
+}
+#toggleTheme {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background: #0d47a1;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 1000;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#toggleTheme:hover {
+    background: #1565c0;
+    transform: scale(1.05);
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    min-height: 380px;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
 }
